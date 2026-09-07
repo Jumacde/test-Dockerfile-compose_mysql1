@@ -24,10 +24,29 @@ SHOW TABLES;
 5. insert data
  a. INSERT INTO users2(name, email) VALUEES
 ('Alice2', 'alice2@exmaple.com'),
-('Bob2', 'bob2@exmaple.com');
+ ('Bob2', 'bob2@exmaple.com');
  b. check data
 SELECT * FORM users2;
 6. exit from mysql
 exit
 
+- what i did
+1. Dockerfile: use sql.
+2. compose.yaml: port number, environments, setting DBs.
+3. init.sql: init-setting sql.ex) CREATE DATABASE, TABLE.
+4. env: password und username.
+
+-note
+commands to log in to the sql
+1.sudo docker exec -it mysql-test bash
+2. mysql -u root -p
+
+commands after login
+SHOW DATABASES;
+use sampledb3
+SHOW TABLES;
+INSERT INTO users3 (name, email) VALUES
+-> ('Alice', 'alice3@example.com'),
+-> ('Bob', 'bob3@example.com');
+SELECT * FORM users3;
 

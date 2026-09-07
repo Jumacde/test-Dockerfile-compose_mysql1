@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS sampledb_compose CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+
+CREATE TABLE IF NOT EXISTS user3 (
+ id INT AUTO_INCREMENT PRIMARY KEY,
+ name VARCHAR(100) NOT NULL,
+ email VARCHAR(255) UNIQUE,
+ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO user3(name, email) VALUES ('testuser', 'test@example.com');

@@ -1,0 +1,16 @@
+services:
+  db:
+    image: mysql:latest
+    container_name: mysql-test
+    volumes:
+      - test-mysql_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    ports:
+      - "${DB_PORT}:3306"
+
+volumes:
+  test-mysql_data:
