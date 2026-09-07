@@ -50,3 +50,10 @@ INSERT INTO users3 (name, email) VALUES
 -> ('Bob', 'bob3@example.com');
 SELECT * FORM users3;
 
+- python
+run command: 
+1. source ~/venv/bin/activate
+2. python3 selectAllData.py
+3. end virtual environment: 
+ deactivate
+

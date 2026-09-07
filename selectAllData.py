@@ -5,12 +5,12 @@ conn = mysql.connector.connect(
     port=13306,
     user="root",
     password="pass",
-    database="sampledb"
+    database="sampledb3"
 )
 
 cursor = conn.cursor(dictionary=True)
 
-cursor.execute("SELECT * FROM users;")
+cursor.execute("SELECT * FROM user3;")
 rows = cursor.fetchall()
 
 if rows:
